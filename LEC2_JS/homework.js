@@ -80,3 +80,4 @@
 //     return output;
 // }
 // console.log(hof(data,square,half,add2));
+// new hof 
