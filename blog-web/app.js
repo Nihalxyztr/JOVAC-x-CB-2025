@@ -7,10 +7,8 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://Nihal:NihalTripathi123@cluster0.lxvknrj.mongodb.net/blogDB?retryWrites=true&w=majority&appName=Cluster0", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log(" MongoDB connected"))
+mongoose.connect("mongodb+srv://Nihal:NihalTripathi123@cluster0.lxvknrj.mongodb.net/blogDB?retryWrites=true&w=majority&appName=Cluster0")
+.then(() => console.log(" MongoDB connected"))
   .catch(err => console.log(" MongoDB error:", err));
 
 const blogSchema = new mongoose.Schema({
