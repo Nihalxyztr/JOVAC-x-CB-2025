@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1> My Blog</h1>
+    <a class="compose-btn" href="/compose">+ Compose</a>
+  </header>
+  <main>
+    <% posts.forEach(post => { %>
+      <div class="post-card">
+        <h2><a href="/post/<%= post._id %>"><%= post.title %></a></h2>
+        <p><%= post.content.length > 150 ? post.content.substring(0, 150) + "..." : post.content %></p>
+      </div>
+    <% }) %>
+  </main>
+</body>
+</html>
